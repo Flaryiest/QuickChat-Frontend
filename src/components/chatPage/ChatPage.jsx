@@ -14,7 +14,7 @@ function ChatPage() {
     const ws = useRef(null)
     const localTime = moment().format('YYYY-MM-DD')
     useEffect(() => {
-        ws.current = new WebSocket("ws://quickchat-server-production.up.railway.app")
+        ws.current = new WebSocket("wss://quickchat-server-production.up.railway.app")
         ws.current.onopen = () => {
             console.log("websocket opened")
         }
@@ -77,7 +77,7 @@ function ChatPage() {
         const response = await fetch("https://quickchat-backend-production.up.railway.app/api/chats", {
             method: 'GET',
             credentials: 'include'
-        })
+        }) 
         const userChats = await response.json()
         setChats(userChats)
     }
