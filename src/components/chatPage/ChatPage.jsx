@@ -14,7 +14,7 @@ function ChatPage() {
     const ws = useRef(null)
     const localTime = moment().format('YYYY-MM-DD')
     useEffect(() => {
-        ws.current = new WebSocket("ws://localhost:8080")
+        ws.current = new WebSocket("ws://quickchat-server-production.up.railway.app")
         ws.current.onopen = () => {
             console.log("websocket opened")
         }
