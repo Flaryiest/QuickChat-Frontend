@@ -3,7 +3,7 @@ import ScrollToTop from "../ScrollToTop"
 import "/src/styles/settingsPage.css"
 import { useState, useEffect } from "react"
 import axios from "axios"
-import ProfilePicture from "../profilePicture"
+import ProfilePicture from "../ProfilePicture"
 function SettingsPage() {
     const [user, setUser] = useState({username: "Not Logged In"})
     const [file, setFile] = useState(null)
