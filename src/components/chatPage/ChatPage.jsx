@@ -4,7 +4,7 @@ import ScrollToTop from "../ScrollToTop"
 import "/src/styles/chatPage.css"
 import UserSearch from "./UserSearch.jsx"
 import { Link } from "react-router-dom"
-import ProfilePicture from "../profilePicture.jsx"
+import ProfilePicture from "../ProfilePicture.jsx"
 import moment from "moment"
 function ChatPage() {
     const [chats, setChats] = useState([])
