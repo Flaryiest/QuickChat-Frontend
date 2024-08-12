@@ -22,7 +22,7 @@ function LogInPage() {
     }, [isSubmitted, navigate])
 
     async function sendForm(data) {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/login", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

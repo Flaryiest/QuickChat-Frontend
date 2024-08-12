@@ -9,7 +9,7 @@ function SettingsPage() {
     const [file, setFile] = useState(null)
     const [profilePicture, setProfilePicture] = useState(null)
     async function getUser() {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/user", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/user", {
             method: 'GET',
             credentials: 'include'
         })
@@ -23,7 +23,7 @@ function SettingsPage() {
     }, [])
     
     async function getCurrentProfilePicture() {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/profilePicture", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/profilePicture", {
             method: "GET",
             credentials: "include"
         })
@@ -38,7 +38,7 @@ function SettingsPage() {
     const upload = async (e) => {
         const formData = new FormData()
         formData.append("file", file)
-        response = await axios.post("http://quickchat-backend-production.up.railway.app/api/profilePicture", formData)
+        response = await axios.post("https://quickchat-backend-production.up.railway.app/api/profilePicture", formData)
     }
 
     return <div className="settingsPage">

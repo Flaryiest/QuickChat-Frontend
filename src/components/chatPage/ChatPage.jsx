@@ -55,7 +55,7 @@ function ChatPage() {
 
     async function sendMessage(message) {
         await sendMessageToServer(message)
-        await fetch("http://quickchat-backend-production.up.railway.app/api/sendMessage", {
+        await fetch("https://quickchat-backend-production.up.railway.app/api/sendMessage", {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -74,7 +74,7 @@ function ChatPage() {
     }
 
     async function getChats() {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/chats", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/chats", {
             method: 'GET',
             credentials: 'include'
         })
@@ -83,7 +83,7 @@ function ChatPage() {
     }
 
     async function getMessages() {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/getMessages", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/getMessages", {
             method: "POST",
             credentials: "include",
             headers: {

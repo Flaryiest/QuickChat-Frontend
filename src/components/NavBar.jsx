@@ -5,7 +5,7 @@ function NavBar() {
     const [loginStatus, setLoginStatus] = useState(null)
     const navigate = useNavigate()
     async function getStatus() {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/checkLoggedIn", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/checkLoggedIn", {
             method: 'GET',
             credentials: 'include'
         })
@@ -18,7 +18,7 @@ function NavBar() {
     }
 
     async function logOut() {
-        await fetch("http://quickchat-backend-production.up.railway.app/api/log-out", {
+        await fetch("https://quickchat-backend-production.up.railway.app/api/log-out", {
             method: 'GET',
             credentials: "include",
         })

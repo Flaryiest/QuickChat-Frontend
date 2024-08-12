@@ -19,7 +19,7 @@ function SignUpPage() {
     }, [isSubmitted, navigate])
 
     async function sendForm(data) {
-        await fetch("http://quickchat-backend-production.up.railway.app/api/signup", {
+        await fetch("https://quickchat-backend-production.up.railway.app/api/signup", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

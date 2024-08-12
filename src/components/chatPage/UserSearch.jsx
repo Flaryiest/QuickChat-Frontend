@@ -10,7 +10,7 @@ function UserSearch({renderFunction}) {
     }, [])
 
     async function getUsers() {
-        const response = await fetch("http://quickchat-backend-production.up.railway.app/api/users", {
+        const response = await fetch("https://quickchat-backend-production.up.railway.app/api/users", {
             method: 'GET',
             credentials: 'include'
         })
@@ -21,7 +21,7 @@ function UserSearch({renderFunction}) {
     }  
 
     async function createNewChat(chatUser) {
-        await fetch("http://quickchat-backend-production.up.railway.app/api/chats", {
+        await fetch("https://quickchat-backend-production.up.railway.app/api/chats", {
             method: 'POST',
             credentials: 'include',
             headers: {
